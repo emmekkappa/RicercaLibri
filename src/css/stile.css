@@ -77,6 +77,59 @@ body {
 
 /* Stile per la descrizione del libro */
 .descrizione-libro {
-    margin-top: 10px; /* Spazio superiore per la descrizione */;
     font-style: italic; /* Stile corsivo per la descrizione */
-    color: #
+    color: #555; /* Colore grigio chiaro per la descrizione */
+    margin-top: 10px; /* Spazio sopra la descrizione */
+    font-size: 0.9em; /* Testo leggermente più piccolo rispetto al titolo */
+    display: none; /* La descrizione è nascosta di default */
+}
+
+/* Aggiungi l'effetto hover per il titolo */
+#lista-libri .list-group-item:hover {
+    background-color: #e1f5fe; /* Colore di sfondo quando l'utente passa sopra un elemento della lista */
+}
+
+/* (Opzionale) Elimina eventuali padding o margini indesiderati */
+#lista-libri li {
+    list-style-type: none; /* Rimuove i puntini dalla lista */
+    margin: 10px 0; /* Spazio tra gli elementi della lista */
+    padding: 8px; /* Spazio interno agli elementi */
+}
+
+/* Stile per la modale */
+.modal {
+    display: none; /* Nascosta di default */
+    position: fixed;
+    z-index: 1; /* Si sovrappone ad altri contenuti */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Attiva lo scrolling se necessario */
+    background-color: rgb(0,0,0); /* Colore di sfondo */
+    background-color: rgba(0,0,0,0.4); /* Semitrasparente */
+}
+
+/* Contenuto della modale */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Pulsante di chiusura */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
