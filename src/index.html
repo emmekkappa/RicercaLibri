@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricerca Libri</title>
+    
+    <!-- Bootstrap 5 per lo stile responsive -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome per icona di ricerca -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Font Lato per il testo generale e Merriweather per l'H1 -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Collegamento al CSS personalizzato -->
+    <link rel="stylesheet" href="css/stile.css">
+</head>
+<body>
+    <!-- Container principale con stile centrato -->
+    <div class="container text-center my-5 py-5 rounded" id="ricerca-container">
+        <!-- Titolo dell'applicazione con font e colore personalizzati -->
+        <h1 class="mb-4" id="titolo">Ricerca Libri</h1>
+        
+        <!-- Campo di input con icona di ricerca a sinistra -->
+        <div class="input-group mb-3">
+            <!-- Icona di ricerca a sinistra, con stile aggiunto da Font Awesome -->
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+            <!-- Campo di input per la ricerca con testo di suggerimento semi-trasparente -->
+            <input type="text" id="categoria" class="form-control" placeholder="Inserisci una categoria di libri">
+        </div>
+        
+        <!-- Pulsante per avviare la ricerca -->
+        <button id="cerca" class="btn btn-ricerca">Cerca</button>
+        
+        <!-- Lista per mostrare i risultati della ricerca -->
+        <ul id="lista-libri" class="list-group mt-4"></ul>
+    </div>
+
+        <!-- Modal per visualizzare la descrizione -->
+    <div id="modalDescrizione" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <p id="descrizioneLibro"></p>
+        </div>
+    </div>
+
+    <!-- Script JavaScript per la logica dell'applicazione -->
+    <script src="js/applicazione.js" type="module"></script>
+    <script src="js/api.js" type="module"></script> <!-- Verifica del collegamento al file JS -->
+</body>
+</html>

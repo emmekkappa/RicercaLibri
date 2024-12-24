@@ -1,2 +1,17 @@
+# Ignora i file generati da macOS
 .DS_Store
 
+# Ignora le cartelle di dipendenze e build
+/node_modules
+/dist
+/.parcel-cache
+
+# Ignora i file di build generati da Parcel (CSS/JS)
+index.b3994fde.css
+index.b3994fde.css.map
+index.e026c58c.css
+index.e026c58c.css.map
+index.f7d1b8db.js
+index.f7d1b8db.js.map
+index.f44f667d.js
+index.f44f667d.js.map

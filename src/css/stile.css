@@ -1,0 +1,135 @@
+/* Imposta il font globale per tutto il documento */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f0f8ff; /* Colore di sfondo chiaro */
+}
+
+/* Stile per il container principale */
+#ricerca-container {
+    max-width: 600px; /* Limita la larghezza per mantenerlo centrato */
+    background: linear-gradient(135deg, #bee8ed, #93d7da); /* Gradiente azzurro-verde petrolio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    padding: 20px; /* Spazio interno */
+    border-radius: 8px; /* Bordi arrotondati */
+}
+
+/* Stile per il titolo principale */
+#titolo {
+    font-family: 'Merriweather', serif; /* Font Merriweather per H1 */
+    color: #067a7e; /* Colore verde petrolio per il titolo */
+    font-weight: bold; /* Titolo in grassetto */
+}
+
+/* Stile per il pulsante di ricerca */
+.btn-ricerca {
+    background-color: #ff7043; /* Colore di sfondo rosso-arancio */
+    color: white; /* Colore del testo bianco */
+    font-weight: bold; /* Testo in grassetto */
+    border: none; /* Rimuove il bordo */
+    padding: 10px 20px; /* Aggiunge spazio attorno al testo */
+    border-radius: 5px; /* Angoli arrotondati */
+    transition: background-color 0.3s; /* Transizione per effetto hover */
+}
+
+/* Effetto hover per il pulsante di ricerca */
+.btn-ricerca:hover {
+    background-color: #e64a19; /* Colore rosso-arancio più scuro */
+}
+
+/* Stile per il campo di input */
+#categoria {
+    font-family: 'Lato', sans-serif; /* Usa il font Lato */
+    color: rgba(0, 0, 0, 0.6); /* Testo leggermente trasparente */
+}
+
+/* Modifica dello stile del testo di suggerimento (placeholder) */
+#categoria::placeholder {
+    color: rgba(0, 0, 0, 0.3); /* Colore semi-trasparente per testo di suggerimento */
+    font-weight: 400; /* Testo normale */
+}
+
+/* Stile per l'icona di ricerca */
+.input-group-text {
+    background-color: #e0f7fa; /* Sfondo per l'icona che si adatta al design */
+    border: none; /* Rimuove bordo per un look pulito */
+    color: #004d40; /* Colore verde petrolio per l'icona */
+}
+
+/* Stile per la lista dei risultati */
+#lista-libri {
+    margin-top: 40px; /* Spazio superiore */
+    text-align: left; /* Assicura che il testo sia allineato a sinistra */
+}
+
+/* Stile degli elementi della lista */
+#lista-libri .list-group-item {
+    display: flex; /* Abilita Flexbox per l'elemento */
+    flex-direction: column; /* Colonna per permettere la descrizione sotto il titolo */
+    justify-content: flex-start; /* Allinea gli elementi all'inizio */
+    align-items: flex-start; /* Allinea il testo e i dettagli a sinistra */
+    border: none; /* Rimuove il bordo */
+    font-weight: 500; /* Testo semi-grassetto */
+    text-align: left; /* Allineamento del testo a sinistra */
+    margin-bottom: 10px; /* Spazio tra gli elementi della lista */
+    padding: 10px; /* Aggiunge spazio interno agli elementi */
+    cursor: pointer; /* Aggiunge il cursore di tipo "pointer" per indicare che è cliccabile */
+}
+
+/* Stile per la descrizione del libro */
+.descrizione-libro {
+    font-style: italic; /* Stile corsivo per la descrizione */
+    color: #555; /* Colore grigio chiaro per la descrizione */
+    margin-top: 10px; /* Spazio sopra la descrizione */
+    font-size: 0.9em; /* Testo leggermente più piccolo rispetto al titolo */
+    display: none; /* La descrizione è nascosta di default */
+}
+
+/* Aggiungi l'effetto hover per il titolo */
+#lista-libri .list-group-item:hover {
+    background-color: #e1f5fe; /* Colore di sfondo quando l'utente passa sopra un elemento della lista */
+}
+
+/* (Opzionale) Elimina eventuali padding o margini indesiderati */
+#lista-libri li {
+    list-style-type: none; /* Rimuove i puntini dalla lista */
+    margin: 10px 0; /* Spazio tra gli elementi della lista */
+    padding: 8px; /* Spazio interno agli elementi */
+}
+
+/* Stile per la modale */
+.modal {
+    display: none; /* Nascosta di default */
+    position: fixed;
+    z-index: 1; /* Si sovrappone ad altri contenuti */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Attiva lo scrolling se necessario */
+    background-color: rgb(0,0,0); /* Colore di sfondo */
+    background-color: rgba(0,0,0,0.4); /* Semitrasparente */
+}
+
+/* Contenuto della modale */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Pulsante di chiusura */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
